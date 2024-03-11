@@ -19,9 +19,15 @@ Instructions to install crosschat:
 4:Download The latest release of crosschat.zip
 
 5:Upload the dmzx folder to your phpbb etx folder
+
 6:Open the upload folder and upload all files to the root of your phpbb forum
+
 7:change the files you just uploaded to included your database login information (ignoring sendtomc.php)
+
 8:Open file mchat.php found in the dmzx folder you placed in extentions
+
   on line 363 change forum.example.com $apisendurl to your forum url leaving the rest alone in the url provided
+  
 9: Download and start your python webserver on port 8081 with uvicorn:
-  ```uvicorn main:app --reload --host 0.0.0.0 --port 8081````
+
+  uvicorn main:app --reload --host 0.0.0.0 --port 8081
