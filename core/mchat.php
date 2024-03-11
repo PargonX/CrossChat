@@ -340,7 +340,7 @@ class mchat
 		}
 
 		$message = $this->request->variable('message', '', true);
-
+		$mess = urlencode($message);
 		if (!$this->mchat_settings->cfg('mchat_max_input_height'))
 		{
 			$message = preg_replace('/\s+/', ' ', $message);
@@ -358,7 +358,10 @@ class mchat
 			'user_ip'		=> $this->user->ip,
 			'message_time'	=> time(),
 		]);
-
+		$user = $this->user->data['user_id'];
+		$user = urlencode($user);
+		$apisendurl = "https://forum.example.com/sendtomc.php?user_id=$user&message=$mess"
+	        $xml = file_get_contents($apisendurl);
 		/**
 		 * Event to modify a new message before it is inserted in the database
 		 *
