@@ -7,11 +7,17 @@ croschat Extention fork of mChat
 Instructions to install crosschat:
 
 1: Download and upload CrossChatBB.jar to your Minecraft Server
+
 2: Download DiscordSRV and set up the chat channel back and forth between it and your discord server
+
 3: In the CrossChat.yml file found in CrossChat plugin folder (created after running), you will find a the following line:
+
     ForumURL = ""
+    
    Please input your forum url into here
+   
 4:Download The latest release of crosschat.zip
+
 5:Upload the dmzx folder to your phpbb etx folder
 6:Open the upload folder and upload all files to the root of your phpbb forum
 7:change the files you just uploaded to included your database login information (ignoring sendtomc.php)
