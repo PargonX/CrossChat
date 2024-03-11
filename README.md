@@ -1,23 +1,21 @@
-phpBB Extension - mChat
+croschat Extention fork of mChat
 =====================
 
 [![Build Status](https://travis-ci.org/kasimi/mChat.svg?branch=master)](https://travis-ci.org/kasimi/mChat)
 
-## Install
+## Setup
+Instructions to install crosschat:
 
-1. Download the [latest release](https://github.com/kasimi/mChat/releases).
-2. Unzip the downloaded release, and change the name of the folder to `mchat`.
-3. In the `ext` directory of your phpBB board, create a new directory named `dmzx` if it does not already exist.
-4. Copy the `mchat` folder to `/ext/dmzx/`. If done correctly, the folder structure should look like this: `your forum root)/ext/dmzx/mchat/composer.json`.
-5. Navigate in the ACP to `Customise -> Manage extensions`.
-6. Look for `mChat` under the `Disabled Extensions` list, and click its `Enable` link.
-
-## Uninstall
-
-1. Navigate in the ACP to `Customise -> Extension Management -> Extensions`.
-2. Look for `mChat` under the `Enabled Extensions` list, and click its `Disable` link.
-3. To permanently uninstall, click `Delete Data` and then delete the `/ext/dmzx/mchat` folder.
-
-## License
-
-[GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
+1: Download and upload CrossChatBB.jar to your Minecraft Server
+2: Download DiscordSRV and set up the chat channel back and forth between it and your discord server
+3: In the CrossChat.yml file found in CrossChat plugin folder (created after running), you will find a the following line:
+    ForumURL = ""
+   Please input your forum url into here
+4:Download The latest release of crosschat.zip
+5:Upload the dmzx folder to your phpbb etx folder
+6:Open the upload folder and upload all files to the root of your phpbb forum
+7:change the files you just uploaded to included your database login information (ignoring sendtomc.php)
+8:Open file mchat.php found in the dmzx folder you placed in extentions
+  on line 363 change forum.example.com $apisendurl to your forum url leaving the rest alone in the url provided
+9: Download and start your python webserver on port 8081 with uvicorn:
+  ```uvicorn main:app --reload --host 0.0.0.0 --port 8081````
